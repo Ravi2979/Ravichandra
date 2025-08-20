@@ -12,6 +12,10 @@ func main() {
 	fmt.Println(simplecal.Add(a, b))
 	fmt.Println(simplecal.Subb(a, b))
 
+	//short hand declaration
+	d := 30
+	fmt.Println("The value of d is:", d)
+
 	//for loop
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
