@@ -42,9 +42,6 @@ return r.width*r.height
 
 
 # Example of Difference b/w Function vs Method
-type Rectangle struct {
-    width, height float64
-}
 
 // Function
 It has no receiver
