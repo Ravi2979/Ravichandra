@@ -32,18 +32,17 @@ func Groceries() {
 }
 
 // Struct + Methods
-type City struct {
-	Name       string
-	Population int
-	areacode   float64
+type Rectangle struct {
+	width, height float64
 }
 
-func (c City) Info() {
-	fmt.Println(c.Name, "has population", c.Population, "and areacode", c.areacode)
+func (r Rectangle) Area() float64 {
+	return r.width * r.height
 }
 
-func (c *City) Grow(extra int) {
-	c.Population += extra
+func (r *Rectangle) Resize(newWidth, newHeight float64) {
+	r.width = newWidth
+	r.height = newHeight
 }
 
 func main() {
@@ -55,9 +54,9 @@ func main() {
 
 	Groceries()
 
-	c1 := City{Name: "Ravulapalem", Population: 150000, areacode: 05}
-	c1.Info()
-	c1.Grow(5000)
-	fmt.Println("After growth:")
-	c1.Info()
+	rect := Rectangle{width: 10, height: 5}
+	fmt.Println("\nRectangle area:", rect.Area())
+
+	rect.Resize(20, 10)
+	fmt.Println("Rectangle area rebuilt :", rect.Area())
 }
